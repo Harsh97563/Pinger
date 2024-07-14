@@ -19,7 +19,7 @@ export const HoverEffect = ({
 
   if(!items.length){
     return (
-      <div className=" text-4xl font-bold text-white">Only you are active right now.</div>
+      <div className=" text-3xl font-bold text-white p-4">Only you are active right now.</div>
 
     )
   }
