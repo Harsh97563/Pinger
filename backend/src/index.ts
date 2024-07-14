@@ -11,10 +11,7 @@ const app = express();
 const port = process.env.PORT || 4000;
 app.use(express.json())
 
-app.use(cors({
-    origin: 'https://ping-you.netlify.app',
-    credentials: true
-  }));
+app.use(cors());
 
 app.post('/token', async (req, res) => {
     
