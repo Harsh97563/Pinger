@@ -16,6 +16,13 @@ export const HoverEffect = ({
   socket: WebSocket | null;
 }) => {
   let [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+
+  if(!items.length){
+    return (
+      <div className=" text-4xl font-bold text-white">Only you are active right now.</div>
+
+    )
+  }
   
   return (
     <div
