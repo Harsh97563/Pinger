@@ -10,7 +10,12 @@ import { generateToken, verifyToken } from "./generateToken";
 const app = express();
 const port = process.env.PORT || 4000;
 app.use(express.json())
-app.use(cors())
+
+app.use(cors({
+    origin: 'https://ping-you.netlify.app',
+    credentials: true
+  }));
+
 app.post('/token', async (req, res) => {
     
     try {
